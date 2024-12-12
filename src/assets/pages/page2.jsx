@@ -56,7 +56,7 @@ function Page2({ formData, setFormData }) {
   />
   
   <Link to="/">
-    <button className="rounded-md bg-green-500 px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-800 hover:text-white">
+    <button className="rounded-md bg-blue-400 px-2.5 py-1.5 m-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-600 hover:text-white">
       Prev
     </button>
   </Link>

@@ -69,9 +69,9 @@ function Page3({ formData, setFormData }) {
         placeholder="Do you need guidance?"
       />
       <Link to="/page2">
-             <button className = "rounded-md bg-white px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Prev</button>
+             <button className = "rounded-md bg-blue-400 px-2.5 py-1.5 m-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-600 hover:text-white">Prev</button>
       </Link>
-      <button className = "rounded-md bg-white px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+      <button className = "rounded-md bg-orange-400 px-2.5 py-1.5 m-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-orange-600"
       onClick={handleSubmit}>Submit</button>
     </div>
     </div>

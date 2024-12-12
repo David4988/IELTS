@@ -8,24 +8,24 @@ function Page3({ formData, setFormData }) {
   };
 
   const handleSubmit = async () => {
-    try {
-      const response = await fetch('/api/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-  
-      const result = await response.json();
-      if (response.ok) {
-        alert(result.message);
-      } else {
-        alert('Submission failed: ' + result.message);
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Submission failed.');
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert(result.message);
+    } else {
+      alert('Submission failed: ' + result.message);
     }
-  };
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    alert('Submission failed.');
+  }
+};
 
   return (
     <section className="flex h-screen">

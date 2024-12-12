@@ -1,50 +1,26 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"; 
-import InputField  from "../components/InputField";
 import ButtonGroup from "../components/ButtonGroup";
 
 const Page1 = ({ formData, setFormData }) => {
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
   const handleClick = (field, value) => {
     setFormData({ ...formData, [field]: value });
+    
   };
 
   return (
-    <div>
-      <h2>Page 1</h2>
-      <InputField
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Enter your name"
-      />
-      <InputField
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Enter your email"
-      />
-      <InputField
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        placeholder="Enter your phone number"
-      />
-      <div>
-        <p>Are you planning to study abroad?</p>
+            <div className = "mx-auto max-w-4xl text-center">
+            <p>When do you want to study abroad?</p>
         <ButtonGroup
           field="studyAbroad"
-          options={["Yes", "No"]}
+          options={["Jan 2025", "May/Sep 2025", "Year 2026"]}
           handleClick={handleClick}
         />
-      </div>
-      <Link to="/page2">
-        <button>Next</button>
-      </Link>
-    </div>
+        <Link to="/page2">
+             <button className = "rounded-md bg-white px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Next</button>
+          </Link>
+        </div>
+   
   );
 };
 Page1.propTypes = {

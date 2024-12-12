@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"; // Import PropTypes
 import InputField from "../components/InputField";
+import { Link } from "react-router-dom";
 function Page3({ formData, setFormData }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +59,11 @@ function Page3({ formData, setFormData }) {
         onChange={handleChange}
         placeholder="Enter your high education"
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <Link to="/page2">
+             <button className = "rounded-md bg-white px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Next</button>
+      </Link>
+      <button className = "rounded-md bg-white px-2.5 py-1.5 m-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+      onClick={handleSubmit}>Submit</button>
     </div>
   );
 }

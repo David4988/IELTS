@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://davidson4988:Jason2005@davidson.ljv3s.mongodb.net/')
+mongoose.connect("mongodb+srv://davidson4988:Jason2005@davidson.ljv3s.mongodb.net/")
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.log('Failed to connect to MongoDB', err));
 

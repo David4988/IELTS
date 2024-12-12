@@ -42,7 +42,7 @@ const Page1 = ({ formData, setFormData }) => {
           handleClick={handleClick}
         />
         <Link to="/page2" className="place-items-end ">
-             <button className = "rounded-md bg-blue-600 px-2.5 py-1.5 m-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-800">Next</button>
+             <button className = "rounded-md bg-blue-400 px-2.5 py-1.5 m-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-800">Next</button>
           </Link>
         </div>
         </div>

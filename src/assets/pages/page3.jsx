@@ -7,7 +7,8 @@ function Page3({ formData, setFormData }) {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
   try {
     const response = await fetch('/api/submit', {
       method: 'POST',
@@ -15,12 +16,12 @@ function Page3({ formData, setFormData }) {
       body: JSON.stringify(formData),
     });
 
-    const result = await response.json();
-    if (response.ok) {
-      alert(result.message);
-    } else {
-      alert('Submission failed: ' + result.message);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+
+    const data = await response.json(); // Make sure the response is JSON
+    console.log('Form submitted successfully:', data.message);
   } catch (error) {
     console.error('Error submitting form:', error);
     alert('Submission failed.');

@@ -7,6 +7,7 @@ function Page2({ formData, setFormData }) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  
 
   return (
     <div>
@@ -17,6 +18,7 @@ function Page2({ formData, setFormData }) {
         onChange={handleChange}
         placeholder="Study Abroad"
       />
+
       <InputField
         name="iletsStatus"
         value={formData.iletsStatus}

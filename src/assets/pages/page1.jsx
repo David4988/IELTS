@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"; 
 import InputField  from "../components/InputField";
+import ButtonGroup from "../components/ButtonGroup";
 
 const Page1 = ({ formData, setFormData }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+  const handleClick = (field, value) => {
+    setFormData({ ...formData, [field]: value });
   };
 
   return (
@@ -29,6 +33,14 @@ const Page1 = ({ formData, setFormData }) => {
         onChange={handleChange}
         placeholder="Enter your phone number"
       />
+      <div>
+        <p>Are you planning to study abroad?</p>
+        <ButtonGroup
+          field="studyAbroad"
+          options={["Yes", "No"]}
+          handleClick={handleClick}
+        />
+      </div>
       <Link to="/page2">
         <button>Next</button>
       </Link>

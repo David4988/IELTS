@@ -60,7 +60,7 @@ Page1.propTypes = {
       preferedProgram: PropTypes.string.isRequired,
       City: PropTypes.string.isRequired,
       passStatus: PropTypes.string.isRequired,
-      needGuidance: PropTypes.string.isRequired,
+      needGuidence: PropTypes.string.isRequired,
       highEdu: PropTypes.string.isRequired,
     }).isRequired,
     setFormData: PropTypes.func.isRequired,

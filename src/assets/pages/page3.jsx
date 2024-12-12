@@ -80,19 +80,19 @@ function Page3({ formData, setFormData }) {
 }
 
 Page3.propTypes = {
-    formData: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
-      studyAbroad: PropTypes.string.isRequired,
-      iletsStatus: PropTypes.string.isRequired,
-      preferedProgram: PropTypes.string.isRequired,
-      City: PropTypes.string.isRequired,
-      passStatus: PropTypes.string.isRequired,
-      needGuidance: PropTypes.string.isRequired,
-      highEdu: PropTypes.string.isRequired,
-    }).isRequired,
-    setFormData: PropTypes.func.isRequired,
-  };
+  formData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    studyAbroad: PropTypes.string.isRequired,
+    iletsStatus: PropTypes.string.isRequired,
+    preferedProgram: PropTypes.string.isRequired,
+    City: PropTypes.string.isRequired,
+    passStatus: PropTypes.string.isRequired,
+    needGuidence: PropTypes.string.isRequired,
+    highEdu: PropTypes.string.isRequired,
+  }).isRequired,
+  setFormData: PropTypes.func.isRequired,
+};
 
 export default Page3;

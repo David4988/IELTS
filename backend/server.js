@@ -21,21 +21,22 @@ const formSchema = new mongoose.Schema({
   email: String,
   phone: String,
   studyAbroad: String,
-  ieltsStatus: String,
+  iletsStatus: String,
   preferedProgram: String,
   City: String,
   passStatus: String,
   needGuidence: String,
+  highEdu: String,
 });
 
 const Form = mongoose.model('Form', formSchema);
 
 // Routes
 app.post('/submit', async (req, res) => {
-  const { name, email, phone, studyAbroad, ieltsStatus, preferedProgram, City, passStatus, needGuidence, highEdu } = req.body;
+  const { name, email, phone, studyAbroad, iletsStatus, preferedProgram, City, passStatus, needGuidence, highEdu } = req.body;
   
   try {
-    const newForm = new Form({ name, email, phone, studyAbroad, ieltsStatus, preferedProgram, City, passStatus, needGuidence, highEdu });
+    const newForm = new Form({ name, email, phone, studyAbroad, iletsStatus, preferedProgram, City, passStatus, needGuidence, highEdu });
     await newForm.save();
     res.status(200).json({ message: 'Form submitted successfully!' });
   } catch (err) {

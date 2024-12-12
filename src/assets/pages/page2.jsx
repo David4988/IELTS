@@ -44,7 +44,7 @@ function Page2({ formData, setFormData }) {
   />
   <p className="m-2 font-semibold">How can we help you?</p>
   <ButtonGroup
-          field="needGuidance"
+          field="needGuidence"
           options={["I want to Check my Admit Eligibility", "I want End to End Guidance", "I want University Shortlist","I am not sure"]}
           handleClick={handleClick}
   />
@@ -74,19 +74,19 @@ function Page2({ formData, setFormData }) {
 
 // Define prop types for the component
 Page2.propTypes = {
-    formData: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
-      studyAbroad: PropTypes.string.isRequired,
-      iletsStatus: PropTypes.string.isRequired,
-      preferedProgram: PropTypes.string.isRequired,
-      City: PropTypes.string.isRequired,
-      passStatus: PropTypes.string.isRequired,
-      needGuidance: PropTypes.string.isRequired,
-      highEdu: PropTypes.string.isRequired,
-    }).isRequired,
-    setFormData: PropTypes.func.isRequired,
-  };
+  formData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    studyAbroad: PropTypes.string.isRequired,
+    iletsStatus: PropTypes.string.isRequired,
+    preferedProgram: PropTypes.string.isRequired,
+    City: PropTypes.string.isRequired,
+    passStatus: PropTypes.string.isRequired,
+    needGuidence: PropTypes.string.isRequired,
+    highEdu: PropTypes.string.isRequired,
+  }).isRequired,
+  setFormData: PropTypes.func.isRequired,
+};
 
 export default Page2;

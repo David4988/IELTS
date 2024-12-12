@@ -8,28 +8,23 @@ function Page3({ formData, setFormData }) {
   };
 
   const handleSubmit = async () => {
-    console.log('Form Submitted', formData);
-    // Send formData to backend or API here
     try {
-        const response = await fetch('http://localhost:5000/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
   
-        if (!response.ok) {
-          throw new Error('Failed to submit the form');
-        }
-  
-        const result = await response.json();
-        console.log('Response from server:', result);
-        alert('Form Submitted Successfully');
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit the form. Please try again.');
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message);
+      } else {
+        alert('Submission failed: ' + result.message);
       }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Submission failed.');
+    }
   };
 
   return (
